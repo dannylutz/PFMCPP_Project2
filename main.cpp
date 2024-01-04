@@ -1,6 +1,9 @@
 #include <iostream>
 
-template <typename... T> void ignoreUnused(T &&...) {}
+template <typename... T>
+void ignoreUnused(T&&...)
+{
+}
 
 /*
 Project 2 - Part 1 / 1
@@ -63,36 +66,33 @@ the 'auto' keyword. c) pass the local variables to ignoreUnused() as you did in
  */
 
 // 2)
-void variableDeclarations() {
-  int numberOfSquirrels = 3;
-  int numberOfCats = 1;
-  int numberOfDogs = 2;
+void variableDeclarations()
+{
+    int numberOfSquirrels = 3;
+    int numberOfCats = 1;
+    int numberOfDogs = 2;
 
-  double magicNumber = 3.14;
-  double rootMeanSquare = 1.414;
-  double oddsOfRain = 0.5;
+    double magicNumber = 3.14;
+    double rootMeanSquare = 1.414;
+    double oddsOfRain = 0.5;
 
-  bool isRaining = false;
-  bool isSnowing = true;
-  bool isSunny = false;
+    bool isRaining = false;
+    bool isSnowing = true;
+    bool isSunny = false;
 
-  float priceOfAdmission = 5.25f;
-  float priceOfLunch = 12.99f;
-  float priceOfCab = 20.75f;
+    float priceOfAdmission = 5.25f;
+    float priceOfLunch = 12.99f;
+    float priceOfCab = 20.75f;
 
-  char favouriteLetter = 'z';
-  char favouriteSymbol = '!';
-  char favouriteNumber = '4';
+    char favouriteLetter = 'z';
+    char favouriteSymbol = '!';
+    char favouriteNumber = '4';
 
-  unsigned int planets = 8;
-  unsigned int provinces = 10;
-  unsigned int territories = 3;
+    unsigned int planets = 8;
+    unsigned int provinces = 10;
+    unsigned int territories = 3;
 
-  ignoreUnused(numberOfSquirrels, numberOfCats, numberOfDogs, magicNumber,
-               rootMeanSquare, oddsOfRain, isRaining, isSnowing, isSunny,
-               priceOfAdmission, priceOfLunch, priceOfCab, favouriteLetter,
-               favouriteNumber, favouriteSymbol, planets, provinces,
-               territories);
+    ignoreUnused(numberOfSquirrels, numberOfCats, numberOfDogs, magicNumber, rootMeanSquare, oddsOfRain, isRaining, isSnowing, isSunny, priceOfAdmission, priceOfLunch, priceOfCab, favouriteLetter, favouriteNumber, favouriteSymbol, planets, provinces, territories);
 }
 
 /*
@@ -102,59 +102,64 @@ void variableDeclarations() {
 /*
  1)
  */
-int totalAnimals(int lions, int bears, double unicorns = 0.707) {
-  ignoreUnused(lions, bears, unicorns);
-  return {};
+int totalAnimals(int lions, int bears, double unicorns = 0.707)
+{
+    ignoreUnused(lions, bears, unicorns);
+    return {};
 }
 
 /*
  2)
  */
-float costofOuting(float priceOfLunch, float priceOfAdmission,
-                   float priceOfCab) {
-  ignoreUnused(priceOfLunch, priceOfAdmission, priceOfCab);
-  return {};
+float costofOuting(float priceOfLunch, float priceOfAdmission, float priceOfCab)
+{
+    ignoreUnused(priceOfLunch, priceOfAdmission, priceOfCab);
+    return {};
 }
 
 /*
  3)
  */
-bool itIsNiceOutside(int temperature, unsigned int humidity, int pop,
-                     unsigned int wind, bool sunny = true) {
-  ignoreUnused(temperature, humidity, pop, wind, sunny);
-  return {};
+bool itIsNiceOutside(int temperature, unsigned int humidity, int pop, unsigned int wind, bool sunny = true)
+{
+    ignoreUnused(temperature, humidity, pop, wind, sunny);
+    return {};
 }
 
 /*
  4)
  */
 void printTripDetails(unsigned int numberOfpassengers = 3,
-                      double numberOfKilometers = 120, unsigned int month = 1,
-                      unsigned int day = 1, int year = 2024) {
-  ignoreUnused(numberOfpassengers, numberOfKilometers, month, day, year);
+                      double numberOfKilometers = 120,
+                      unsigned int month = 1,
+                      unsigned int day = 1,
+                      int year = 2024)
+{
+    ignoreUnused(numberOfpassengers, numberOfKilometers, month, day, year);
 }
 
 /*
  5)
  */
-void recordExpenses(float priceOfLunch, float priceOfAdmission,
-                    float priceOfCab, int jobId = 1010, char clientId = 'c') {
-  ignoreUnused(priceOfLunch, priceOfAdmission, priceOfCab, jobId, clientId);
+void recordExpenses(float priceOfLunch, float priceOfAdmission, float priceOfCab, int jobId = 1010, char clientId = 'c')
+{
+    ignoreUnused(priceOfLunch, priceOfAdmission, priceOfCab, jobId, clientId);
 }
 
 /*
  6)
  */
-void addInitialsToForm(char firstInitial, char middleInitial,
-                       char lastInitial) {
-  ignoreUnused(firstInitial, middleInitial, lastInitial);
+void addInitialsToForm(char firstInitial, char middleInitial, char lastInitial)
+{
+    ignoreUnused(firstInitial, middleInitial, lastInitial);
 }
 
 /*
  7)
  */
-void setPosition(double x = 0.0, double y = 0.0, double z = 0.0) {
-  ignoreUnused(x, y, z);
+void setPosition(double x = 0.0, double y = 0.0, double z = 0.0)
+{
+    ignoreUnused(x, y, z);
 }
 
 /*
@@ -163,26 +168,28 @@ void setPosition(double x = 0.0, double y = 0.0, double z = 0.0) {
 unsigned int totalCandyBudget(unsigned int numberOfCandies,
                               unsigned int numberOfPeople,
                               unsigned int numberOfCandyPerPerson = 1,
-                              float costPerPiece = 0.42f) {
-  ignoreUnused(numberOfCandies, numberOfPeople, numberOfCandyPerPerson,
-               costPerPiece);
-  return {};
+                              float costPerPiece = 0.42f)
+{
+    ignoreUnused(numberOfCandies, numberOfPeople, numberOfCandyPerPerson, costPerPiece);
+    return {};
 }
 
 /*
  9)
  */
-char getLetterByPosition(unsigned int letterPositionInAlphabet) {
-  ignoreUnused(letterPositionInAlphabet);
-  return {};
+char getLetterByPosition(unsigned int letterPositionInAlphabet)
+{
+    ignoreUnused(letterPositionInAlphabet);
+    return {};
 }
 
 /*
  10)
  */
-bool trackIsArmed(int trackIndex = 1, bool absolute) {
-  ignoreUnused(trackIndex);
-  return {};
+bool trackIsArmed(int trackIndex = 1, bool absolute = true)
+{
+    ignoreUnused(trackIndex, absolute);
+    return {};
 }
 
 /*
@@ -202,43 +209,43 @@ bool trackIsArmed(int trackIndex = 1, bool absolute) {
  Wait for my code review.
  */
 
-int main() {
-  // example of calling that function, storing the value, and passing it to
-  // ignoreUnused at the end of main()
+int main()
+{
+    // example of calling that function, storing the value, and passing it to
+    // ignoreUnused at the end of main()
 
-  // 1)
-  auto animals = totalAnimals(3, 1);
+    // 1)
+    auto animals = totalAnimals(3, 1);
 
-  // 2)
-  auto cost = costofOuting(12.99f, 5.25f, 20.75f);
+    // 2)
+    auto cost = costofOuting(12.99f, 5.25f, 20.75f);
 
-  // 3)
-  auto weatherIsNice = itIsNiceOutside(80, 50, 100, 0, false);
+    // 3)
+    auto weatherIsNice = itIsNiceOutside(80, 50, 100, 0, false);
 
-  // 4)
-  printTripDetails(4, 180, 1, 2, 2024);
+    // 4)
+    printTripDetails(4, 180, 1, 2, 2024);
 
-  // 5)
-  recordexpenses(12.99f, 5.25f, 20.75f, 1010, 'd');
+    // 5)
+    recordExpenses(12.99f, 5.25f, 20.75f, 1010, 'd');
 
-  // 6)
-  addInitialsToForm('c', 'a', 't');
+    // 6)
+    addInitialsToForm('c', 'a', 't');
 
-  // 7)
-  setPositon(1.1, 2.2, 3.3);
+    // 7)
+    setPosition(1.1, 2.2, 3.3);
 
-  // 8)
-  auto totalCandyBudget = totalCandyBudget(10, 5, 2, 0.42f);
+    // 8)
+    auto candyBudget = totalCandyBudget(10, 5, 2, 0.42f);
 
-  // 9)
-  auto getLetterByPosition = getLetterByPosition(3);
+    // 9)
+    auto letterPosition = getLetterByPosition(3);
 
-  // 10)
-  auto trackIsArmed = trackIsArmed(12, false);
+    // 10)
+    auto trackArmState = trackIsArmed(12, false);
 
-  ignoreUnused(animlas, cost, weatherIsNice, totalCandyBudget,
-               getLetterByPosition, trackIsArmed);
+    ignoreUnused(animals, cost, weatherIsNice, candyBudget, letterPosition, trackArmState);
 
-  std::cout << "good to go!" << std::endl;
-  return 0;
+    std::cout << "good to go!" << std::endl;
+    return 0;
 }
