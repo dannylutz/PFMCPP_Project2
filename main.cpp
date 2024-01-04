@@ -102,7 +102,7 @@ void variableDeclarations()
 /*
  1)
  */
-int totalAnimals(int lions, int bears, double unicorns = 0.707)
+int getNumberOfAnimals(int lions, int bears, double unicorns = 0.707)
 {
     ignoreUnused(lions, bears, unicorns);
     return {};
@@ -111,7 +111,7 @@ int totalAnimals(int lions, int bears, double unicorns = 0.707)
 /*
  2)
  */
-float costofOuting(float priceOfLunch, float priceOfAdmission, float priceOfCab)
+float getCostOfOuting(float priceOfLunch, float priceOfAdmission, float priceOfCab)
 {
     ignoreUnused(priceOfLunch, priceOfAdmission, priceOfCab);
     return {};
@@ -120,7 +120,7 @@ float costofOuting(float priceOfLunch, float priceOfAdmission, float priceOfCab)
 /*
  3)
  */
-bool itIsNiceOutside(int temperature, unsigned int humidity, int pop, unsigned int wind, bool sunny = true)
+bool confirmNiceWeather(int temperature, unsigned int humidity, int pop, unsigned int wind, bool sunny = true)
 {
     ignoreUnused(temperature, humidity, pop, wind, sunny);
     return {};
@@ -165,7 +165,7 @@ void setPosition(double x = 0.0, double y = 0.0, double z = 0.0)
 /*
  8)
  */
-unsigned int totalCandyBudget(unsigned int numberOfCandies,
+unsigned int getCandyCost(unsigned int numberOfCandies,
                               unsigned int numberOfPeople,
                               unsigned int numberOfCandyPerPerson = 1,
                               float costPerPiece = 0.42f)
@@ -186,7 +186,7 @@ char getLetterByPosition(unsigned int letterPositionInAlphabet)
 /*
  10)
  */
-bool trackIsArmed(int trackIndex = 1, bool absolute = true)
+bool getTrackArmState(int trackIndex = 1, bool absolute = true)
 {
     ignoreUnused(trackIndex, absolute);
     return {};
@@ -215,13 +215,13 @@ int main()
     // ignoreUnused at the end of main()
 
     // 1)
-    auto animals = totalAnimals(3, 1);
+    auto animals = getNumberOfAnimals(3, 1);
 
     // 2)
-    auto cost = costofOuting(12.99f, 5.25f, 20.75f);
+    auto cost = getCostOfOuting(12.99f, 5.25f, 20.75f);
 
     // 3)
-    auto weatherIsNice = itIsNiceOutside(80, 50, 100, 0, false);
+    auto weatherIsNice = confirmNiceWeather(80, 50, 100, 0, false);
 
     // 4)
     printTripDetails(4, 180, 1, 2, 2024);
@@ -236,13 +236,13 @@ int main()
     setPosition(1.1, 2.2, 3.3);
 
     // 8)
-    auto candyBudget = totalCandyBudget(10, 5, 2, 0.42f);
+    auto candyBudget = getCandyCost(10, 5, 2, 0.42f);
 
     // 9)
     auto letterPosition = getLetterByPosition(3);
 
     // 10)
-    auto trackArmState = trackIsArmed(12, false);
+    auto trackArmState = getTrackArmState(12, false);
 
     ignoreUnused(animals, cost, weatherIsNice, candyBudget, letterPosition, trackArmState);
 
